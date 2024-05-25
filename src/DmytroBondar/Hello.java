@@ -3,31 +3,52 @@ package DmytroBondar;
 public class Hello {
     public static void main(String[] args) {
         System.out.println("Hello World!");
+
+        int[][] arr = {{1, 2, 3},
+                       {4, 5, 6},
+                       {7, 8, 9}};
+
+        reshuffle(arr);
+
+        System.out.println(sumDigits(1234));
+
+        System.out.println(reverseOrder(1234));
+    }
+
+    //масив 3х3 зробити перестановку таким чином щоб рядки стали стовпчиками
+    public static void reshuffle(int[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                System.out.print(arr[j][i] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    //Завдання 1
+    //Напишіть метод, який приймає число та повертає суму цифр цього числа.
+    public static int sumDigits(int a) {
+        int sum = 0;
+        while (a != 0) {
+            sum += a % 10;
+            a /= 10;
+        }
+        return sum;
+    }
+
+    //Завдання 2
+    //Напишіть метод, який приймає число, яке не містить нулів та повертає цифри у зворотному порядку.
+    //Наприклад, на вхід 789, на вихід 987.
+    public static int reverseOrder(int a) {
+        int res = 0;
+
+        return res;
     }
 }
 
 
-// масив 3х3 зробити перестановку таким чином щоб рядки стали стовпчиками
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Завдання 1
-//        Напишіть метод, який приймає число та повертає суму цифр цього числа.
-//Завдання 2
-//        Напишіть метод, який приймає число, яке не містить нулів та повертає цифри у зворотному порядку.
-//        Наприклад, на вхід 789, на вихід 987.
 //Завдання 3
 //        Створіть програму, яка виводить у консоль число імені, наприклад, на вхід Roman = R(18) + O(15) + M(13) + A(1) + N(14) = 61, на вихід
 //61.
