@@ -5,3 +5,4 @@ public class Hello {
         System.out.println("hello from Anna");
     }
 }
+// 2 двовимірних массиви 3х3 в третій масси передати сумму цих двох масивів

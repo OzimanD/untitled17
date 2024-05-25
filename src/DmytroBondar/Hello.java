@@ -5,3 +5,6 @@ public class Hello {
         System.out.println("Hello World!");
     }
 }
+
+
+// масив 3х3 зробити перестановку таким чином щоб рядки стали стовпчиками
