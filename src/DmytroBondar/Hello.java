@@ -27,11 +27,11 @@ public class Hello {
 
     //Завдання 1
     //Напишіть метод, який приймає число та повертає суму цифр цього числа.
-    public static int sumDigits(int a) {
+    public static int sumDigits(int number) {
         int sum = 0;
-        while (a != 0) {
-            sum += a % 10;
-            a /= 10;
+        while (number != 0) {
+            sum += number % 10;
+            number /= 10;
         }
         return sum;
     }
@@ -39,9 +39,12 @@ public class Hello {
     //Завдання 2
     //Напишіть метод, який приймає число, яке не містить нулів та повертає цифри у зворотному порядку.
     //Наприклад, на вхід 789, на вихід 987.
-    public static int reverseOrder(int a) {
+    public static int reverseOrder(int number) {
         int res = 0;
-
+        while (number != 0) {
+            res = res * 10 + number % 10;
+            number /= 10;
+        }
         return res;
     }
 }
