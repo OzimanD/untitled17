@@ -79,7 +79,7 @@ public class Hello {
             if (dateChar == '/') {
                 continue;
             }
-            numberOfDate += Character.getNumericValue(dateChar);
+            numberOfDate += dateChar - 48;
         }
 
         return numberOfDate;
