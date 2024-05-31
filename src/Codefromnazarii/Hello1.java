@@ -1,9 +1,18 @@
 package Codefromnazarii;
 
 public class Hello1 {
-}
+    public static void main(String[] args) {
+            int number = 7;
+            generateMultiplicationTable(number);
+        }
 
-
+        public static void generateMultiplicationTable ( int num){
+            for (int i = 1; i <= 10; i++) {
+                int result = num * i;
+                System.out.printf("%d * %d = %d%n", num, i, result);
+            }
+        }
+    }
 // зробити тамлицю множення числа 7
 
 
