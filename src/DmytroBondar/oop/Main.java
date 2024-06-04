@@ -25,7 +25,7 @@ public class Main {
 
         FootballPlayer[] players = {player1, player2, player3, player4, player5};
 
-        System.out.println("Best Forward:");
+        System.out.println("The best forward:");
         System.out.println(getBestForward(players));
         System.out.println();
 
@@ -41,7 +41,7 @@ public class Main {
         System.out.println(getPlayersWhereGamesLess5UsingCollection(players));
     }
 
-    static FootballPlayer getBestForward(FootballPlayer[] players){
+    static FootballPlayer getBestForward(FootballPlayer[] players) {
         FootballPlayer temp = players[0];
         for (int i = 1; i < players.length; i++) {
             if (temp.getGoalsCount() < players[i].getGoalsCount()){
@@ -51,7 +51,7 @@ public class Main {
         return temp;
     }
 
-    static void printPlayersWhereGamesLess5(FootballPlayer[] players){
+    static void printPlayersWhereGamesLess5(FootballPlayer[] players) {
         for (FootballPlayer player : players) {
             if (player.getGamesCount() < 5) {
                 System.out.println(player);
@@ -59,7 +59,7 @@ public class Main {
         }
     }
 
-    static FootballPlayer[] getPlayersWhereGamesLess5(FootballPlayer[] players){
+    static FootballPlayer[] getPlayersWhereGamesLess5(FootballPlayer[] players) {
         FootballPlayer[] footballPlayers = new FootballPlayer[players.length];
         int count = 0;
         for (FootballPlayer player : players) {
@@ -70,7 +70,7 @@ public class Main {
         return footballPlayers;
     }
 
-    static void printFootballPlayers(FootballPlayer[] players){
+    static void printFootballPlayers(FootballPlayer[] players) {
         for (FootballPlayer player : players) {
             if (player != null) {
                 System.out.println(player);
@@ -78,13 +78,13 @@ public class Main {
         }
     }
 
-    static List<FootballPlayer> getPlayersWhereGamesLess5UsingCollection(FootballPlayer[] players){
-        List<FootballPlayer> oopFootballs = new ArrayList<>();
+    static List<FootballPlayer> getPlayersWhereGamesLess5UsingCollection(FootballPlayer[] players) {
+        List<FootballPlayer> footballPlayers = new ArrayList<>();
         for (FootballPlayer player : players) {
             if (player.getGamesCount() < 5) {
-                oopFootballs.add(player);
+                footballPlayers.add(player);
             }
         }
-        return oopFootballs;
+        return footballPlayers;
     }
 }
