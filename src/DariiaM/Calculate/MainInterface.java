@@ -1,2 +1,4 @@
-package DariiaM.Calculate;public interface MainInterface {
+package DariiaM.Calculate;
+
+public interface MainInterface extends Add, Minus,Multiplication, Div {
 }
