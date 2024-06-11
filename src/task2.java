@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class task2 {
     public static void main(String[] args) {
-    //    number(int num);
-
+        number(int num);
+        sout
     }
     public static int number(int num){
         Scanner in = new Scanner(System.in);
