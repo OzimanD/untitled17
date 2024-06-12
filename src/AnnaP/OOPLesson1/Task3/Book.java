@@ -21,7 +21,7 @@ public class Book {
         // inputting Content
         Content content = new Content();
         System.out.println("Content of the book");
-        content.content = scanner.next();
+        content.content1 = scanner.next();
 
         System.out.println("would you like to see the book info?");
         String answer = scanner.next();
