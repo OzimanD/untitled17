@@ -1,4 +1,4 @@
-package DmytroBondar.oop;
+package DmytroBondar.oop.footballPlayer;
 
 /*
 Поля структуры
@@ -33,40 +33,20 @@ public class FootballPlayer {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
     public String getRole() {
         return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
     }
 
     public int getAge() {
         return age;
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
-
     public int getGamesCount() {
         return gamesCount;
     }
 
-    public void setGamesCount(int gamesCount) {
-        this.gamesCount = gamesCount;
-    }
-
     public int getGoalsCount() {
         return goalsCount;
-    }
-
-    public void setGoalsCount(int goalsCount) {
-        this.goalsCount = goalsCount;
     }
 
     @Override
