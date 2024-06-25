@@ -1,4 +1,4 @@
-package DmytroBondar.oop.books;
+package DmytroBondar.lessons.oop.books;
 
 /*
 Автор

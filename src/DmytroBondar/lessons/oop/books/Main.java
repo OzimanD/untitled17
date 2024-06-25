@@ -1,4 +1,4 @@
-package DmytroBondar.oop.books;
+package DmytroBondar.lessons.oop.books;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package DmytroBondar.oop.footballPlayer;
+package DmytroBondar.lessons.oop.footballPlayer;
 
 import java.util.ArrayList;
 import java.util.List;

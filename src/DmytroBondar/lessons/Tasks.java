@@ -1,4 +1,4 @@
-package DmytroBondar;
+package DmytroBondar.lessons;
 
 import java.util.Scanner;
 
