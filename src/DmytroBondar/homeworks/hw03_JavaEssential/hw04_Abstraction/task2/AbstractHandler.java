@@ -1,0 +1,11 @@
+package DmytroBondar.homeworks.hw03_JavaEssential.hw04_Abstraction.task2;
+
+public abstract class AbstractHandler {
+    public abstract void open();
+
+    public abstract void create();
+
+    public abstract void change();
+
+    public abstract void save();
+}
