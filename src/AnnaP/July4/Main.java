@@ -27,6 +27,11 @@ public class Main {
         System.out.println(main.engineerWorkers(workers, "Engineer", "Male", 65));
         System.out.println("________________");
         System.out.println(main.engineerWorkers(workers, "Engineer", "Female", 60));
+        try {
+            main.saveToFile(workers);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public List<Workers> engineerWorkers(List<Workers> workers, String job, String sex, int year) {
@@ -39,23 +44,26 @@ public class Main {
         return workersMen;
     }
 
-    public void saveToFile(List<Workers> workers) throws FileNotFoundException {
+    public void saveToFile(List<Workers> workers) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(
-                "D:\\Main.java"), "Cp866"));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("Main.txt"), "Cp866"));
+                "/Users/annapozina/Desktop/Java.pages"), "Cp866"));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("workers.txt"), "Cp866"));
         int c = 0;
-        while ((c = br.read()) != -1) {
-            bw.write((char) c);
+        for (int i = 0; i < workers.size(); i++) {
+            bw.write(workers.get(i).getName());
+            bw.write("  ");
+            bw.write(workers.get(i).getSureName());
+            bw.write("  ");
+            bw.write(String.valueOf(workers.get(i).getYear()));
+            bw.write("  ");
+            bw.write(workers.get(i).getWorkType());
+            bw.write("\n");
         }
+
         br.close();
         bw.flush();
         bw.close();
         System.out.println("The job's finished.");
-    } catch(
-    Exception e)
-
-    {
-        System.out.println(e);
     }
 }
 
