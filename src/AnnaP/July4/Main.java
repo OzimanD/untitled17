@@ -1,6 +1,7 @@
 package AnnaP.July4;
 
 import java.io.*;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,6 +33,8 @@ public class Main {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        System.out.println(LocalDateTime.now());
+
     }
 
     public List<Workers> engineerWorkers(List<Workers> workers, String job, String sex, int year) {
