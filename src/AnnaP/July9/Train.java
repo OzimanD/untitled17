@@ -10,7 +10,7 @@ public class Train {
     private LocalTime timeArriving;
     private LocalTime timeDeparting;
 
-    public Train(int trainNumber, String placeArriving, String placeDeparting, LocalTime timeArriving, LocalTime timeDeparting) {
+    public Train(int trainNumber, String placeArriving, String placeDeparting, LocalTime  timeDeparting, LocalTime timeArriving) {
         this.trainNumber = trainNumber;
         this.placeArriving = placeArriving;
         this.placeDeparting = placeDeparting;
