@@ -27,8 +27,8 @@ public class Main {
         trains.add(train6);
 
         Main main = new Main();
-        //System.out.println(main.routLength(trains, 1, 30));
-        main.longDurationTrains(trains, 1, 30);
+        System.out.println(main.routLength(trains, 1, 30));
+        System.out.println(main.longDurationTrains(trains, 3, 30));
     }
 
     public List<Train> routLength(List<Train> trains, int hours, int minutes) {
@@ -68,8 +68,6 @@ public class Main {
         List<Train> longTrains = new ArrayList<>();
 
         for (int i = 0; i < trains.size(); i++) {
-            //LocalDateTime todaysDeparture = LocalDateTime.of(LocalDate.now(), trains.get(i).getTimeDeparting());
-            // LocalDateTime todaysArrival = LocalDateTime.of(LocalDate.now(), trains.get(i).getTimeArriving());
             long tripTimeMilliseconds;
             if (trains.get(i).getTimeDeparting().isAfter(trains.get(i).getTimeArriving())) {
                 tripTimeMilliseconds = 86400000 - Time.valueOf(trains.get(i).getTimeDeparting()).getTime() + Time.valueOf(trains.get(i).getTimeArriving()).getTime();
