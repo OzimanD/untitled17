@@ -27,13 +27,15 @@ public class Main {
         trains.add(train6);
 
         Main main = new Main();
-        System.out.println(main.routLength(trains, 1, 30));
-        System.out.println(main.longDurationTrains(trains, 3, 30));
+        // System.out.println(main.routLength(trains, 1, 30));
+        System.out.println("\n");
+        System.out.println(main.longDurationTrains(trains, 3, 10));
     }
 
     public List<Train> routLength(List<Train> trains, int hours, int minutes) {
         List<Train> longTrains = new ArrayList<>();
         for (int i = 0; i < trains.size(); i++) {
+
             int arrivingH = trains.get(i).getTimeArriving().getHour() * 60;
             int arrivingM = trains.get(i).getTimeArriving().getMinute();
             int arriving = arrivingM + arrivingH;
@@ -68,6 +70,8 @@ public class Main {
         List<Train> longTrains = new ArrayList<>();
 
         for (int i = 0; i < trains.size(); i++) {
+            String city = trains.get(i).getPlaceArriving();
+            System.out.println(city);
             long tripTimeMilliseconds;
             if (trains.get(i).getTimeDeparting().isAfter(trains.get(i).getTimeArriving())) {
                 tripTimeMilliseconds = 86400000 - Time.valueOf(trains.get(i).getTimeDeparting()).getTime() + Time.valueOf(trains.get(i).getTimeArriving()).getTime();
@@ -87,6 +91,9 @@ public class Main {
                 System.out.println("duration: " + tripH + ":" + tripM + " from " + trains.get(i).getPlaceDeparting());
             } else if (tripH < hours) {
                 System.out.println("duration: " + tripH + ":" + tripM + " from " + trains.get(i).getPlaceDeparting() + " it is a short train ");
+            } else if (tripH == hours && tripM == minutes) {
+                longTrains.add(trains.get(i));
+                System.out.println("duration: " + tripH + ":" + tripM + " from " + trains.get(i).getPlaceDeparting() + " duration is the same as requested time ");
             }
         }
         return longTrains;
