@@ -4,57 +4,57 @@ import java.time.LocalDate;
 import java.util.Date;
 
 public class Car {
-    private String Manufacturer;
-    private String Mark;
-    private String Type;
-    private Date buildYear;
+    private String manufacturer;
+    private String mark;
+    private String type;
+    private LocalDate buildYear;
 
-    public Car(String manufacturer, String mark, String type, Date buildYear) {
-        Manufacturer = manufacturer;
-        Mark = mark;
-        Type = type;
+    public Car(String manufacturer, String mark, String type, LocalDate buildYear) {
+        this.manufacturer = manufacturer;
+        this.mark = mark;
+        this.type = type;
         this.buildYear = buildYear;
     }
 
     @Override
     public String toString() {
         return "Car{" +
-                "Manufacturer='" + Manufacturer + '\'' +
-                ", Mark='" + Mark + '\'' +
-                ", Type='" + Type + '\'' +
+                "manufacturer='" + manufacturer + '\'' +
+                ", mark='" + mark + '\'' +
+                ", type='" + type + '\'' +
                 ", buildYear=" + buildYear +
                 '}';
     }
 
     public String getManufacturer() {
-        return Manufacturer;
+        return manufacturer;
     }
 
     public void setManufacturer(String manufacturer) {
-        Manufacturer = manufacturer;
+        this.manufacturer = manufacturer;
     }
 
     public String getMark() {
-        return Mark;
+        return mark;
     }
 
     public void setMark(String mark) {
-        Mark = mark;
+        this.mark = mark;
     }
 
     public String getType() {
-        return Type;
+        return type;
     }
 
     public void setType(String type) {
-        Type = type;
+        this.type = type;
     }
 
-    public Date getBuildYear() {
+    public LocalDate getBuildYear() {
         return buildYear;
     }
 
-    public void setBuildYear(Date buildYear) {
+    public void setBuildYear(LocalDate buildYear) {
         this.buildYear = buildYear;
     }
 }
